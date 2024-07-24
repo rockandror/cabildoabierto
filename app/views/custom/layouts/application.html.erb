@@ -3,6 +3,7 @@
   <head>
     <%= render "layouts/common_head", default_title: setting["org_name"] %>
     <%= render "layouts/meta_tags" %>
+    <%= render "layouts/no_script" %>
     <%= content_for :canonical %>
     <%= favicon_link_tag image_path_for("apple-touch-icon-200.png"),
                          rel: "icon apple-touch-icon",
@@ -11,6 +12,7 @@
     <%= content_for :social_media_meta_tags %>
 
     <%= raw setting["html.per_page_code_head"] %>
+    <%= render Cookies::Vendors::ScriptsComponent.new %>
   </head>
   <body class="<%= yield(:body_class) %> public">
     <%= raw setting["html.per_page_code_body"] %>
@@ -27,6 +29,8 @@
     <div class="footer">
       <%= render Layout::FooterComponent.new %>
     </div>
+    <%= render Layout::CookiesConsent::BannerComponent.new %>
+    <%= render Layout::CookiesConsent::SetupComponent.new %>
     <div class="reveal" id="googleSearch" data-reveal>
       <button class="close-button" data-close aria-label="Close modal" type="button">
         <span aria-hidden="true">&times;</span>

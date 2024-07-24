@@ -1,5 +1,17 @@
 es:
   settings:
+    cookies_consent:
+      admin_test_mode: Activar el modo de pruebas
+      admin_test_mode_description: Esta función ocultará la interfaz de consentimiento de cookies para todos los usuarios excepto los administradores cuando esté activada. Le permite probar su configuración antes de publicarla. Desactive esta función una vez que la haya probado correctamente.
+      more_info_link: Enlace a la política de cookies
+      more_info_link_description: Enlace que se muestra en el banner de consentimiento a la página de política de cookies
+      setup_page: Activar la página de configuración de consentimiento de cookies de terceros
+      setup_page_description: Permite a los usuarios configurar (aceptar o rechazar) el seguimiento de cookies de terceros.
+      version_name: Nombre de la versión
+      version_name_description: Cambia el nombre de la versión para obligar a todos los usuarios a realizar el proceso de consentimiento de cookies de nuevo. Esto puede ser particularmente útil cuando se introducen cambios drásticos en la política de cookies que requieren de un nuevo consentimiento explícito por parte de los usuarios.
+    feature:
+      cookies_consent: Banner de consentimiento de cookies
+      cookies_consent_description: Activa el banner de consentimiento de cookies para informar a los usuarios sobre las cookies que utiliza la aplicación.
     process:
       legislation: "Propuestas del Cabildo"
     sdg:
